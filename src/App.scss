@@ -661,6 +661,12 @@ ul {
     }
     .box__container {
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      .project__title {
+        p:last-child {
+          max-height: 7rem;
+          overflow: scroll;
+        }
+      }
     }
   }
 
