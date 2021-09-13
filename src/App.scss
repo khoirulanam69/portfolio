@@ -1,0 +1,682 @@
+@import "assets/scss/mixin";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+//================================ INITIAL ==================================
+// background color
+$bg-color: #ffffff;
+
+// color
+$primary-color: #f0a410;
+$secondary-color: #00045f;
+$tertiary-color: #101010;
+
+// text color
+$text-primary-color: #222222;
+$text-secondary-color: #a2a2a2;
+$text-tertiary-color: #ffffff;
+
+// image decoration
+$img-decoration: "../img/decorations/Vector.svg";
+$img-decoration1: "../img/decorations/Vector1.svg";
+
+//================================ GENERAL ==================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  overflow: hidden;
+}
+
+// FONT SIZE
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.3em;
+}
+h6 {
+  font-size: 1em;
+}
+a {
+  text-decoration: none;
+  color: $tertiary-color;
+}
+ul {
+  list-style: none;
+}
+.jumbotron,
+.container,
+.contact {
+  margin: 1rem 10%;
+}
+.divider {
+  height: 5em;
+}
+
+// ----------------- STYLE -----------------
+// NAVBAR
+.navbar {
+  @include flex-between();
+  @include fixed($top: 0);
+  padding: 0.5rem 5% 0 5%;
+  z-index: 111;
+  background: transparent;
+  transition: 0.3s;
+  img {
+    width: 100px;
+    cursor: pointer;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    li {
+      @include flex-center();
+      padding: 10px;
+      cursor: pointer;
+      .icon {
+        display: none;
+      }
+      &.active {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.nav__sticky {
+  background: $bg-color;
+  box-shadow: 0 0 8px rgba($color: $tertiary-color, $alpha: 0.3);
+}
+
+// JUMBOTRON
+.jumbotron {
+  @include flex-between;
+  position: relative;
+  margin-top: 5rem !important;
+  .section {
+    width: 50%;
+    h3 {
+      color: $text-primary-color;
+    }
+    h1 {
+      color: $primary-color;
+    }
+    p {
+      color: $text-secondary-color;
+      margin-top: 1rem;
+    }
+    .button {
+      ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        height: 8rem;
+        margin-top: 2rem;
+        li {
+          &:last-child a {
+            font-size: 2em;
+            color: $text-secondary-color;
+          }
+          &:first-child a {
+            margin-right: 2rem;
+            padding: 1rem 3rem;
+            border-radius: 8px;
+            color: $text-tertiary-color;
+            background: $secondary-color;
+          }
+          a:not(:last-child) {
+            margin-right: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  .image {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .decoration {
+    @include decoration($img-decoration1);
+    left: -50% !important;
+    bottom: -20% !important;
+  }
+}
+
+// PROJECTS
+.projects {
+  .title {
+    width: 40%;
+    padding-left: 10%;
+    p {
+      margin: 1rem 0 2rem 0;
+    }
+    ul {
+      display: flex;
+      li {
+        position: relative;
+        cursor: pointer;
+        padding: 0 10px;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      .active::before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 3px solid $primary-color;
+      }
+    }
+  }
+  .box__container {
+    width: 90%;
+    margin: 1rem auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    .project {
+      position: relative;
+      cursor: pointer;
+      .project__title {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        right: 2rem;
+        color: $text-tertiary-color;
+      }
+      &:hover .hover {
+        display: block;
+      }
+      .hover {
+        content: "";
+        width: 100%;
+        height: 98.5%;
+        position: absolute;
+        background: rgba($color: $tertiary-color, $alpha: 0.7);
+        display: none;
+        p:last-child {
+          margin-top: 1rem;
+        }
+        .project__link {
+          @include flex-between();
+          width: 100%;
+          padding: 0 1rem;
+          position: absolute;
+          bottom: 1rem;
+          a {
+            color: $text-tertiary-color;
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .btn__view {
+    cursor: pointer;
+    text-align: center;
+    color: $secondary-color;
+  }
+}
+
+// SKILLS
+.container {
+  @include flex-between();
+  position: relative;
+  .skills {
+    width: 45%;
+    .title {
+      p {
+        margin: 1rem 0 2rem 0;
+      }
+    }
+    .skill__information {
+      @include flex-between();
+      margin-top: 1rem;
+    }
+    .skill__bar {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      margin-top: 0.5rem;
+      background: $text-secondary-color;
+      &::before {
+        content: "";
+        position: absolute;
+        transform: translateY(-2px);
+        width: calc(var(--width, 0) * 1%);
+        height: 6px;
+        background: $primary-color;
+      }
+    }
+  }
+
+  .certificates {
+    position: absolute;
+    right: 0;
+    width: 49%;
+    height: 100%;
+    margin: 1rem;
+    .box__certificate {
+      @include flex-center();
+      flex-direction: column;
+      position: absolute;
+      cursor: pointer;
+      width: 230px;
+      height: 230px;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba($color: $tertiary-color, $alpha: 0.3);
+      h5 {
+        text-align: center;
+      }
+    }
+    .website {
+      left: 3rem;
+      top: 3rem;
+    }
+    .android {
+      right: 3rem;
+      bottom: 3rem;
+    }
+  }
+  .decoration {
+    @include decoration($img-decoration1);
+    top: -70% !important;
+    right: -70% !important;
+  }
+  .decoration1 {
+    @include decoration($img-decoration);
+    left: -40%;
+    bottom: -110%;
+  }
+}
+
+// CONTACT
+.contact {
+  position: relative;
+  .section {
+    @include flex-between();
+    .box__information {
+      display: flex;
+      margin-top: 2rem;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+        color: $text-tertiary-color !important;
+        background: $text-secondary-color;
+      }
+      .address__information {
+        width: 80%;
+      }
+    }
+  }
+  form {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea,
+    button {
+      margin-top: 1rem;
+      padding: 10px 15px;
+    }
+    button {
+      width: 25%;
+      border: none;
+      cursor: pointer;
+      outline: inherit;
+      color: $text-tertiary-color;
+      background: $secondary-color;
+    }
+  }
+}
+
+// FOOTER
+.footer__foo {
+  @include flex-between();
+  margin: 0 10%;
+  padding: 2rem 0;
+  border-top: 2px solid $text-secondary-color;
+  .footer__brand img {
+    width: 90%;
+  }
+  .footer__section {
+    @include flex-between();
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+    width: 60%;
+    margin: 1rem;
+    h6 {
+      margin-bottom: 10px;
+    }
+    .list li {
+      cursor: pointer;
+    }
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+.footer__footer {
+  @include flex-center();
+  height: 4rem;
+  color: $text-tertiary-color;
+  background: $tertiary-color;
+  p {
+    margin-left: 5px;
+  }
+}
+
+//================================ 4K ==================================
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 7em;
+  }
+  h2 {
+    font-size: 5em;
+  }
+  h3 {
+    font-size: 4em;
+  }
+  h4 {
+    font-size: 3em;
+  }
+  h5 {
+    font-size: 2em;
+  }
+  h6 {
+    font-size: 1.8em;
+  }
+  p,
+  span,
+  .icon {
+    font-size: 1.5em !important;
+  }
+
+  // NAVBAR
+  .navbar {
+    img {
+      width: 200px;
+    }
+  }
+
+  .projects {
+    .box__container {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  // CERTIFICATES
+  .certificates {
+    .box__certificate {
+      padding: 2rem !important;
+      width: 350px !important;
+      height: 350px !important;
+    }
+  }
+}
+
+//================================ LAPTOP ==================================
+@media (max-width: 1024px) {
+  // GENERAL
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.8em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.2em;
+  }
+  h6 {
+    font-size: 1.1em;
+  }
+  a,
+  p,
+  span,
+  .icon {
+    font-size: 1em;
+  }
+
+  // JUMBOTRON
+  .jumbotron {
+    margin: 1rem 5%;
+  }
+
+  // PROJECTS
+  .projects .title {
+    width: 60%;
+  }
+
+  // CERTIFICATES
+  .certificates {
+    .box__certificate {
+      padding: 1.5rem !important;
+    }
+    .website {
+      left: 0 !important;
+    }
+    .android {
+      right: 0 !important;
+    }
+  }
+
+  // CONTACT
+  .contact {
+    form {
+      button {
+        width: 40%;
+      }
+    }
+  }
+}
+
+//================================ TABLET ==================================
+@media (max-width: 768px) {
+  // GENERAL
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+  h5 {
+    font-size: 1em;
+  }
+  h6 {
+    font-size: 0.8em;
+  }
+  a,
+  p,
+  span,
+  .icon {
+    font-size: 0.8em;
+  }
+
+  // JUMBOTRON
+  .jumbotron {
+    flex-direction: column-reverse;
+    .section {
+      width: 80%;
+      margin-top: 3rem;
+    }
+    .image {
+      width: 80%;
+      img {
+        width: 100%;
+      }
+    }
+    .decoration {
+      height: 50%;
+    }
+  }
+
+  // PROJECTS
+  .projects .title {
+    width: 70%;
+  }
+
+  // CERTIFICATES
+  .container {
+    flex-direction: column;
+    .skills {
+      width: 100%;
+    }
+    .certificates {
+      @include flex-arround();
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 3rem;
+      position: unset;
+      .box__certificate {
+        position: unset;
+        margin: 1rem;
+      }
+      .website {
+        transform: unset;
+      }
+    }
+  }
+
+  // CONTACT
+  .contact {
+    .section {
+      flex-direction: column;
+      .contact__information {
+        width: 100%;
+      }
+    }
+    form {
+      width: 100%;
+      margin: 1rem;
+      button {
+        width: 25%;
+      }
+    }
+  }
+  // FOOTER
+  .footer__foo {
+    flex-direction: column;
+    .footer__section {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+}
+
+//================================ PHONE ==================================
+@media (max-width: 425px) {
+  // NAVBAR
+  .navbar {
+    @include flex-between();
+    @include fixed($top: 0);
+    height: 50px;
+    padding: 0 5%;
+    z-index: 1111;
+    background: $bg-color;
+    .navbar__brand {
+      img {
+        vertical-align: middle;
+        width: 80px;
+      }
+    }
+    ul {
+      @include fixed($bottom: 0);
+      height: 50px;
+      background: $bg-color;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      box-shadow: 0 -2px 8px rgba($color: $tertiary-color, $alpha: 0.1);
+      li {
+        flex-direction: column;
+        cursor: pointer;
+        &:hover {
+          background: rgba($color: $secondary-color, $alpha: 0.1);
+        }
+        &.active a {
+          color: $secondary-color;
+          align-items: center;
+        }
+      }
+      .icon {
+        display: block !important;
+      }
+      a {
+        @include flex-center();
+        color: $text-secondary-color;
+        flex-direction: column;
+      }
+    }
+  }
+
+  // JUMBOTRON
+  .jumbotron {
+    .section {
+      h1 {
+        text-shadow: 0 0 4px rgba($color: $bg-color, $alpha: 0.7);
+      }
+    }
+  }
+
+  // PROJECTS
+  .projects {
+    .title {
+      width: 100%;
+    }
+    .box__container {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+  }
+
+  // CONTACT
+  .contact {
+    form {
+      width: 100%;
+      margin: 1rem;
+      button {
+        width: 40%;
+      }
+    }
+  }
+
+  // FOOTER
+  .footer__footer {
+    margin-bottom: 3rem;
+  }
+}
