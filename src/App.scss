@@ -194,11 +194,21 @@ ul {
       position: relative;
       cursor: pointer;
       .project__title {
-        position: absolute;
-        top: 1rem;
-        left: 2rem;
-        right: 2rem;
+        @include absolute-top();
+        padding: 5%;
         color: $text-tertiary-color;
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   width: 100%;
+        //   height: 100%;
+        //   transform: translate(-1rem, -1rem);
+        //   background-image: linear-gradient(
+        //     to bottom,
+        //     rgba($color: $tertiary-color, $alpha: 0.5),
+        //     transparent
+        //   );
+        // }
       }
       &:hover .hover {
         display: block;
