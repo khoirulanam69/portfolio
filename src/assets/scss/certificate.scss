@@ -1,0 +1,38 @@
+$tertiary-color: #101010;
+
+.web__certificate {
+  display: grid;
+  padding: 2em;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2rem solid $tertiary-color;
+    box-shadow: 0 4px 40px rgba($color: $tertiary-color, $alpha: 0.15);
+  }
+}
+
+.flip {
+  min-width: 350px;
+  min-height: 350px;
+  perspective: 1000px;
+  &:hover .flip__inner {
+    transform: rotateY(180deg);
+  }
+  .flip__inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    .flip__front,
+    .flip__back {
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .flip__back {
+      transform: rotateY(180deg);
+    }
+  }
+}

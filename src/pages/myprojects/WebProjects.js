@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 
 // data
-import DataProjects from '../assets/data/projects';
+import DataProjects from '../../assets/data/projects';
 
 class WebProjects extends Component {
     constructor(props) {

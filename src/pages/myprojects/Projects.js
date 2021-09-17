@@ -1,0 +1,68 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
+
+// PROJECTS
+import WebProjects from '../myprojects/WebProjects';
+import AndroidProjects from '../myprojects/AndroidProjects';
+import AllProjects from '../myprojects/AllProject';
+
+
+function Projects() {
+    const [objectPerLoad, setObjectPerLoad] = useState(2);
+    const [projectType, setProjectType] = useState();
+
+    const CheckTypeProject = () => {
+        if (projectType === "website") {
+            return <WebProjects objectPerLoad={objectPerLoad} />
+        } else if (projectType === "android") {
+            return <AndroidProjects objectPerLoad={objectPerLoad} />
+        }
+        return <AllProjects objectPerLoad={objectPerLoad} />
+    }
+
+    const loadMore = (e) => {
+        if (e.target.innerText === "View More") {
+            setObjectPerLoad(100);
+            e.target.innerText = "View Less";
+        } else {
+            setObjectPerLoad(2);
+            e.target.innerText = "View More";
+        }
+    }
+
+    const setTypeProject = (e) => {
+        if (e.target.innerText === "Android") {
+            setProjectType("android");
+            document.querySelector('.projects .active').classList.remove('active');
+            e.target.classList.add('active');
+        } else if (e.target.innerText === "Website") {
+            setProjectType("website");
+            document.querySelector('.projects .active').classList.remove('active');
+            e.target.classList.add('active');
+        } else {
+            setProjectType("all");
+            document.querySelector('.projects .active').classList.remove('active');
+            e.target.classList.add('active');
+        }
+    }
+
+    return (
+        <div className="projects" id="projects">
+            <div className="title">
+                <h4>MY PROJECTS</h4>
+                <p>Contains a collection of projects for approximately 3 years as a web developer</p>
+                <ul className="menu__projects">
+                    <li className="active" onClick={setTypeProject}><h6>All</h6></li>
+                    <li onClick={setTypeProject}><h6>Website</h6></li>
+                    <li onClick={setTypeProject}><h6>Android</h6></li>
+                </ul>
+            </div>
+            <ul className="box__container">
+                <CheckTypeProject />
+            </ul>
+            <div className="btn__view" onClick={loadMore}><span>View More</span> <FontAwesomeIcon icon={faArrowRight} /></div>
+        </div>
+    )
+}
+export default Projects;
