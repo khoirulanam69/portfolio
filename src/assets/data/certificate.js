@@ -9,6 +9,30 @@ const Certificate = [
     {
         illiyin: Illiyin,
         illiyinBack: IlliyinBack
+    },
+    {
+        illiyin: Illiyin,
+        illiyinBack: IlliyinBack
+    },
+    {
+        illiyin: Illiyin,
+        illiyinBack: IlliyinBack
+    },
+    {
+        illiyin: Illiyin,
+        illiyinBack: IlliyinBack
+    },
+    {
+        illiyin: Illiyin,
+        illiyinBack: IlliyinBack
+    },
+    {
+        illiyin: Illiyin,
+        illiyinBack: IlliyinBack
+    },
+    {
+        illiyin: Illiyin,
+        illiyinBack: IlliyinBack
     }
 ]
 export default Certificate;
