@@ -45,10 +45,10 @@ class Contact extends Component {
                         </div>
                     </div>
                     <form onSubmit={this.sendEmail}>
-                        <input type="text" name="name" placeholder="Your Name" />
-                        <input type="email" name="email" placeholder="Your Email" />
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
                         <input type="text" name="subject" placeholder="Subject" />
-                        <textarea name="message" placeholder="How can I help?" />
+                        <textarea name="message" placeholder="How can I help?" required />
                         <button type="submit">Send</button>
                     </form>
                 </div>
