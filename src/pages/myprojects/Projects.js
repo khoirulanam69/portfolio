@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 
 // PROJECTS
@@ -8,7 +8,8 @@ import AndroidProjects from '../myprojects/AndroidProjects';
 import AllProjects from '../myprojects/AllProject';
 
 
-function Projects() {
+const Projects = () => {
+    const [openAllProjects, setOpenAllProjects] = useState(false)
     const [objectPerLoad, setObjectPerLoad] = useState(2);
     const [projectType, setProjectType] = useState();
 
@@ -22,12 +23,12 @@ function Projects() {
     }
 
     const loadMore = (e) => {
-        if (e.target.innerText === "View More") {
+        if (e.target.innerText === "View More ") {
             setObjectPerLoad(100);
-            e.target.innerText = "View Less";
+            setOpenAllProjects(true);
         } else {
             setObjectPerLoad(2);
-            e.target.innerText = "View More";
+            setOpenAllProjects(false);
         }
     }
 
@@ -61,8 +62,17 @@ function Projects() {
             <ul className="box__container">
                 <CheckTypeProject />
             </ul>
-            <div className="btn__view" onClick={loadMore}><span>View More</span> <FontAwesomeIcon icon={faArrowRight} /></div>
+            {openAllProjects ?
+                <div className="btn__view" onClick={loadMore}>
+                    <span>View Less </span>
+                    <FontAwesomeIcon icon={faChevronUp} />
+                </div> :
+                <div className="btn__view" onClick={loadMore}>
+                    <span>View More </span>
+                    <FontAwesomeIcon icon={faChevronDown} />
+                </div>}
         </div>
+
     )
 }
 export default Projects;

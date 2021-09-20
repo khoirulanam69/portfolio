@@ -45,7 +45,7 @@ const dataProjects = {
             "company": "Illiyin Studio",
             "image": Lamlam,
             "description": "This website is used to provide web hosting in Indonesia. On the website, there are two user roles named admin and member. To access the admin page, add '/admin' in url. To access member page, add '/member' in url.",
-            "website": "http://lamlam.epizy.com/",
+            "website": "http://lamlamapp.epizy.com/",
             "code": "https://codeload.github.com/khoirulanam69/lamlam/zip/refs/heads/master",
             "created": 2020,
             "type": "website"
