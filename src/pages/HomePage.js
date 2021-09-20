@@ -1,14 +1,14 @@
+// library
 import React, { Component } from 'react';
-import '../App.scss';
 
 // COMPONETS
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
 import Projects from './myprojects/Projects';
 import Certificates from './certificates/Certificates';
-import Banner from './components/Banner';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import Banner from '../components/banner/Banner';
+import Skills from '../components/skill/Skills';
+import Contact from '../components/contact/Contact';
 
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');

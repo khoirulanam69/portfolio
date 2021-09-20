@@ -1,9 +1,13 @@
+// library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Component } from "react";
 
 // IMAGES
 import HeroImage from '../../assets/img/hero.png';
+
+// style
+import './banner.scss';
 
 class Banner extends Component {
     render() {

@@ -1,11 +1,15 @@
+// library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
 
-// PROJECTS
-import WebProjects from '../myprojects/WebProjects';
-import AndroidProjects from '../myprojects/AndroidProjects';
-import AllProjects from '../myprojects/AllProject';
+// pages
+import WebProjects from './part-projects/WebProjects';
+import AndroidProjects from './part-projects/AndroidProjects';
+import AllProjects from './part-projects/AllProject';
+
+// style
+import './projects.scss';
 
 
 const Projects = () => {

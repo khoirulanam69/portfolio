@@ -1,0 +1,92 @@
+// color
+$secondary-color: #00045f;
+
+// text color
+$text-secondary-color: #a2a2a2;
+$text-tertiary-color: #ffffff;
+
+.contact {
+  position: relative;
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .box__information {
+      display: flex;
+      margin-top: 2rem;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+        color: $text-tertiary-color !important;
+        background: $text-secondary-color;
+      }
+      .address__information {
+        width: 80%;
+      }
+    }
+  }
+  form {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea,
+    button {
+      margin-top: 1rem;
+      padding: 10px 15px;
+    }
+    button {
+      width: 25%;
+      border: none;
+      cursor: pointer;
+      outline: inherit;
+      color: $text-tertiary-color;
+      background: $secondary-color;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    form {
+      button {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    .section {
+      flex-direction: column;
+      .contact__information {
+        width: 100%;
+      }
+    }
+    form {
+      width: 100%;
+      margin: 1rem;
+      button {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .contact {
+    form {
+      width: 100%;
+      margin: 1rem;
+      button {
+        width: 40%;
+      }
+    }
+  }
+}

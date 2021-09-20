@@ -1,9 +1,13 @@
+// library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faSlidersH, faTasks } from '@fortawesome/free-solid-svg-icons';
 import { Component } from "react";
 
 // IMAGES
 import Logo from '../../assets/img/logo.png';
+
+// style
+import './navbar.scss';
 
 class Navbar extends Component {
     smoothScroll = (item) => {

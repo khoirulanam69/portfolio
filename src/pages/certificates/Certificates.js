@@ -1,9 +1,13 @@
+// library
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
 // ICONS
 import IconWebsite from '../../assets/icons/web.svg';
 import IconAndroid from '../../assets/icons/android.svg';
+
+// style
+import './certificate.scss';
 
 class Certificates extends Component {
     render() {

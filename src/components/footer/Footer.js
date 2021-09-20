@@ -1,3 +1,4 @@
+// library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -6,6 +7,9 @@ import { Component } from "react";
 
 // IMAGES
 import Logo from '../../assets/img/logo.png';
+
+// style
+import './footer.scss';
 
 class Footer extends Component {
     smoothScroll = (item) => {

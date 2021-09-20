@@ -3,6 +3,9 @@ import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg
 import { Component } from "react";
 import emailjs from 'emailjs-com';
 
+// style
+import './contact.scss';
+
 class Contact extends Component {
     sendEmail = (e) => {
         e.preventDefault();

@@ -1,7 +1,9 @@
 import { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
-import MainRoute from "./assets/routes/main-route";
+import MainRoute from "./routes/main-route";
 
+// style
+import './App.scss';
 
 class App extends Component {
   render() {

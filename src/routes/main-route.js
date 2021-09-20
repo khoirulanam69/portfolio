@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom"
-import HomePage from "../../pages/HomePage";
-import WebCertificate from "../../pages/certificates/WebCertificates"
+import HomePage from "../pages/HomePage";
+import WebCertificate from "../pages/certificates/part-certificates/WebCertificates"
 
 const MainRoute = () => {
     return (

@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 
 // data
-import DataProjects from '../../assets/data/projects';
+import DataProjects from '../../../assets/data/projects';
 
-class AllProjects extends Component {
+class AndroidProjects extends Component {
     constructor(props) {
         super(props);
         this.state = { objectPerLoad: this.props.objectPerLoad }
@@ -13,7 +13,10 @@ class AllProjects extends Component {
 
     render() {
         return (
-            DataProjects.projects.slice(0, this.state.objectPerLoad).map((element, idx) => {
+            DataProjects.projects.filter((element) => { return element.type === "android" }).slice(this.state.index, this.state.objectPerLoad).map((element, idx) => {
+                if (element.type !== "android") {
+                    return false;
+                }
                 return (
                     <li key={idx} className="project">
                         <div className="project__title">
@@ -38,4 +41,4 @@ class AllProjects extends Component {
         )
     }
 }
-export default AllProjects;
+export default AndroidProjects;

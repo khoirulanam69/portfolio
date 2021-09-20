@@ -14,7 +14,7 @@ const dataProjects = {
             "name": "Portfolio",
             "company": "My Project",
             "image": Portfolio,
-            "description": "This website is used for my current portfolio. This is using ReactJS framework. This website is also designed by me.",
+            "description": "This website is used for my current portfolio. This is using ReactJS framework. This website is also designed by me. This is my best react project so far.",
             "website": "/",
             "code": "https://codeload.github.com/khoirulanam69/portfolio/zip/refs/heads/master",
             "created": 2021,

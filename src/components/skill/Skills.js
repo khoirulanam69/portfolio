@@ -1,7 +1,11 @@
+// library
 import { Component } from "react";
 
 // DATA
 import DataSkills from '../../assets/data/skills';
+
+// style
+import './skill.scss';
 
 class Skills extends Component {
     render() {

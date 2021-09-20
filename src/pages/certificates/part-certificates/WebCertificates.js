@@ -5,7 +5,10 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 
 // Data
-import Certificate from "../../assets/data/certificate";
+import Certificate from "../../../assets/data/certificate";
+
+// style
+import './partCertificate.scss';
 
 export default class WebCertificate extends Component {
     constructor(props) {
@@ -17,35 +20,7 @@ export default class WebCertificate extends Component {
         };
     }
 
-    // ShowImage = (index) => {
-    //     const { photoIndex, isOpen } = this.state;
-    //     console.log(Certificate[index]);
-    //     return (
-    //         <>
-    //             {isOpen && (
-    //                 <Lightbox
-    //                     mainSrc={Certificate[index][photoIndex]}
-    //                     nextSrc={Certificate[index][(photoIndex + 1) % Certificate[index].length]}
-    //                     prevSrc={Certificate[index][(photoIndex + Certificate[index].length - 1) % Certificate[index].length]}
-    //                     onCloseRequest={() => this.setState({ isOpen: false })}
-    //                     onMovePrevRequest={() =>
-    //                         this.setState({
-    //                             photoIndex: (photoIndex + Certificate[index].length - 1) % Certificate[index].length,
-    //                         })
-    //                     }
-    //                     onMoveNextRequest={() =>
-    //                         this.setState({
-    //                             photoIndex: (photoIndex + 1) % Certificate[index].length,
-    //                         })
-    //                     }
-    //                 />
-    //             )}
-    //         </>
-    //     )
-    // }
-
-    isOpenImage = (e) => {
-        // this.ShowImage(e.target.getAttribute('entry'));
+    isOpenImage = () => {
         this.setState({
             isOpen: true,
             photoIndex: 0
@@ -91,7 +66,6 @@ export default class WebCertificate extends Component {
                     )
                 })
                 }
-                {/* <this.ShowImage /> */}
             </div>
         );
     }
