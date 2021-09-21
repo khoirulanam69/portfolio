@@ -49,19 +49,19 @@ $img-decoration1: "../../assets/img/decorations/Vector1.svg";
       height: 2px;
       margin-top: 0.5rem;
       background: $text-secondary-color;
-      &::before {
-        content: "";
-        position: absolute;
-        transform: translateY(-2px);
-        width: calc(var(--width, 3px) * 1%);
-        height: 6px;
-        background: $primary-color;
-        animation: skillbar 1.5s ease-out;
-      }
+    }
+    .active::before {
+      content: "";
+      position: absolute;
+      transform: translateY(-2px);
+      width: calc(var(--width, 0) * 1%);
+      height: 6px;
+      background: $primary-color;
+      animation: skillbar 1.5s ease-out;
     }
     @keyframes skillbar {
       0% {
-        width: 3px;
+        width: 0;
       }
       100% {
         width: calc(var(--width, 0) * 1%);

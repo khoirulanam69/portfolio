@@ -7,11 +7,13 @@ import DataSkills from '../../assets/data/skills';
 // style
 import './skill.scss';
 
-// if (window.scrollY > document.querySelector('#skills').offsetTop - 300) {
-//     document.querySelectorAll('.skill__bar').forEach(element => {
-//         element.style.display = "block";
-//     })
-// }
+window.addEventListener('scroll', function () {
+    if (window.scrollY > document.querySelector('#skills').offsetTop - 300) {
+        document.querySelectorAll('.skill__bar').forEach(element => {
+            element.classList.add('active');
+        })
+    }
+})
 
 class Skills extends Component {
     render() {
