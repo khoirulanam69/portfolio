@@ -9,6 +9,36 @@ import Logo from '../../assets/img/logo.png';
 // style
 import './navbar.scss';
 
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        // Sticky Navbar
+        if (window.scrollY > 0) {
+            navbar.classList.add("nav__sticky");
+        } else {
+            navbar.classList.remove("nav__sticky");
+        }
+
+        // Active Navbar
+        const project = document.querySelector('.projects');
+        const skill = document.querySelector('#skills');
+        const contact = document.querySelector('.contact');
+
+        if (window.scrollY > project.offsetTop - 300 && window.scrollY < skill.offsetTop - 300) {
+            if (document.querySelector('.navbar .active')) document.querySelector('.navbar .active').classList.remove('active');
+            document.querySelector('.project__menu').classList.add('active');
+        } else if (window.scrollY > skill.offsetTop - 300 && window.scrollY < contact.offsetTop - 300) {
+            if (document.querySelector('.navbar .active')) document.querySelector('.navbar .active').classList.remove('active');
+            document.querySelector('.skill__menu').classList.add('active');
+        } else if (window.scrollY > contact.offsetTop - 300) {
+            if (document.querySelector('.navbar .active')) document.querySelector('.navbar .active').classList.remove('active');
+            document.querySelector('.contact__menu').classList.add('active');
+        } else {
+            if (document.querySelector('.navbar .active')) document.querySelector('.navbar .active').classList.remove('active');
+        }
+    }
+})
+
 class Navbar extends Component {
     smoothScroll = (item) => {
         const target = document.getElementById(item);

@@ -53,9 +53,18 @@ $img-decoration1: "../../assets/img/decorations/Vector1.svg";
         content: "";
         position: absolute;
         transform: translateY(-2px);
-        width: calc(var(--width, 0) * 1%);
+        width: calc(var(--width, 3px) * 1%);
         height: 6px;
         background: $primary-color;
+        animation: skillbar 1.5s ease-out;
+      }
+    }
+    @keyframes skillbar {
+      0% {
+        width: 3px;
+      }
+      100% {
+        width: calc(var(--width, 0) * 1%);
       }
     }
   }
