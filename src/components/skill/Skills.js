@@ -8,10 +8,13 @@ import DataSkills from '../../assets/data/skills';
 import './skill.scss';
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > document.querySelector('#skills').offsetTop - 300) {
-        document.querySelectorAll('.skill__bar').forEach(element => {
-            element.classList.add('active');
-        })
+    const skill = document.querySelector('#skills')
+    if (skill) {
+        if (window.scrollY > skill.offsetTop - 300) {
+            document.querySelectorAll('.skill__bar').forEach(element => {
+                element.classList.add('active');
+            })
+        }
     }
 })
 
