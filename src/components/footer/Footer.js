@@ -1,9 +1,14 @@
 // library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faGithub, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 import { Component } from "react";
+
+// icon
+import FacebookIcon from '../../assets/icons/facebook.png';
+import InstagramIcon from '../../assets/icons/instagram.png';
+import GithubIcon from '../../assets/icons/github.png';
+import WhatsappIcon from '../../assets/icons/whatsapp.png';
+import PhoneIcon from '../../assets/icons/phone.png';
 
 // IMAGES
 import Logo from '../../assets/img/logo.png';
@@ -38,16 +43,16 @@ class Footer extends Component {
                         <li>
                             <h6>SOCIAL MEDIA</h6>
                             <ul className="list">
-                                <li><a href="https://www.facebook.com/profile.php?id=100007872019224"><FontAwesomeIcon icon={faFacebook} className="icon" /> <span>Facebook</span></a></li>
-                                <li><a href="https://www.instagram.com/khoirulanam.69/"><FontAwesomeIcon icon={faInstagram} className="icon" /> <span>Instagram</span></a></li>
-                                <li><a href="https://github.com/khoirulanam69"><FontAwesomeIcon icon={faGithub} className="icon" /> <span>Github</span></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100007872019224"><img src={FacebookIcon} alt="facebook-icon" /></a></li>
+                                <li><a href="https://www.instagram.com/khoirulanam.69/"><img src={InstagramIcon} alt="instagram-icon" /></a></li>
+                                <li><a href="https://github.com/khoirulanam69"><img src={GithubIcon} alt="github-icon" /></a></li>
                             </ul>
                         </li>
                         <li>
                             <h6>CONTACTS</h6>
                             <ul className="list">
-                                <li><a href="https://wa.me/+6281357333886"><FontAwesomeIcon icon={faWhatsapp} className="icon" /> <span>Whatsapp</span></a></li>
-                                <li><a href="tel:+6281357333886"><FontAwesomeIcon icon={faPhone} className="icon" /> <span>Phone</span></a></li>
+                                <li><a href="https://wa.me/+6281357333886"><img src={WhatsappIcon} alt="whatsapp-icon" /></a></li>
+                                <li><a href="tel:+6281357333886"><img src={PhoneIcon} alt="phone-icon" /></a></li>
                             </ul>
                         </li>
                     </ul>

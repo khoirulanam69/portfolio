@@ -1,6 +1,5 @@
 // library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Component } from "react";
 
 // IMAGES
@@ -8,6 +7,7 @@ import HeroImage from '../../assets/img/hero.png';
 
 // style
 import './banner.scss';
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 class Banner extends Component {
     render() {
@@ -20,11 +20,7 @@ class Banner extends Component {
                     <div className="button">
                         <ul>
                             <li><a href="mailto:khoirulanam.um@gmail.com">Let's Talk</a></li>
-                            <li>
-                                <a href="https://wa.me/+6281357333886"><FontAwesomeIcon icon={faWhatsapp} className="icon" /></a>
-                                <a href="https://www.facebook.com/profile.php?id=100007872019224"><FontAwesomeIcon icon={faFacebook} className="icon" /></a>
-                                <a href="https://www.instagram.com/khoirulanam.69/"><FontAwesomeIcon icon={faInstagram} className="icon" /></a>
-                            </li>
+                            <li><a href="/CV-Khoirul-Anam.pdf"><FontAwesomeIcon icon={faDownload} /> Download CV</a></li>
                         </ul>
                     </div>
                 </div>

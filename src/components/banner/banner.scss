@@ -35,12 +35,11 @@ $img-decoration1: "../../assets/img/decorations/Vector1.svg";
       ul {
         display: flex;
         align-items: center;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         height: 8rem;
         margin-top: 2rem;
         li {
           &:last-child a {
-            font-size: 2em;
             color: $text-secondary-color;
           }
           &:first-child a {

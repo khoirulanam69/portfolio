@@ -26,11 +26,19 @@ $text-tertiary-color: #ffffff;
     h6 {
       margin-bottom: 10px;
     }
-    .list li {
-      cursor: pointer;
+    li:not(:first-child) .list {
+      display: flex;
     }
-    li:not(:last-child) {
-      margin-right: 1rem;
+    .list {
+      li {
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      img {
+        width: 1.5em;
+      }
     }
   }
 }
