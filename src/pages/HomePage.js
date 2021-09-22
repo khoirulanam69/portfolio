@@ -9,6 +9,7 @@ import Certificates from './certificates/Certificates';
 import Banner from '../components/banner/Banner';
 import Skills from '../components/skill/Skills';
 import Contact from '../components/contact/Contact';
+import HireMe from '../components/hireme/HireMe';
 
 class HomePage extends Component {
     render() {
@@ -25,6 +26,8 @@ class HomePage extends Component {
                     <div className="decoration" />
                     <div className="decoration1" />
                 </div>
+                <div className="divider" />
+                <HireMe />
                 <div className="divider" />
                 <Contact />
                 <div className="divider" />
