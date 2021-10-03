@@ -30,7 +30,7 @@ class AndroidProjects extends Component {
                                 <p>{element.description}</p>
                             </div>
                             <div className="project__link">
-                                <a href={element.website}>Live Preview <FontAwesomeIcon icon={faEye} /></a>
+                                <a href={element.website} target="_blank" rel="noreferrer">Live Preview <FontAwesomeIcon icon={faEye} /></a>
                                 <a href={element.code}>Download <FontAwesomeIcon icon={faDownload} /></a>
                             </div>
                         </div>
