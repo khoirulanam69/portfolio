@@ -9,6 +9,7 @@ import InstagramIcon from '../../assets/icons/instagram.png';
 import GithubIcon from '../../assets/icons/github.png';
 import WhatsappIcon from '../../assets/icons/whatsapp.png';
 import PhoneIcon from '../../assets/icons/phone.png';
+import YoutubeIcon from '../../assets/icons/youtube.png';
 
 // IMAGES
 import Logo from '../../assets/img/logo.png';
@@ -45,6 +46,7 @@ class Footer extends Component {
                             <ul className="list">
                                 <li><a href="https://www.facebook.com/profile.php?id=100007872019224"><img src={FacebookIcon} alt="facebook-icon" /></a></li>
                                 <li><a href="https://www.instagram.com/khoirulanam.69/"><img src={InstagramIcon} alt="instagram-icon" /></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCHlojfHlpMcqzC0bDUGUZ3Q"><img src={YoutubeIcon} alt="instagram-icon" /></a></li>
                                 <li><a href="https://github.com/khoirulanam69"><img src={GithubIcon} alt="github-icon" /></a></li>
                             </ul>
                         </li>
