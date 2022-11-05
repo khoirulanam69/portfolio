@@ -1,0 +1,84 @@
+.contact {
+  position: relative;
+}
+
+.contact .section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .section .box__information {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.contact .section .box__information .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  color: #ffffff !important;
+  background: #a2a2a2;
+}
+
+.contact .section .box__information .address__information {
+  width: 80%;
+}
+
+.contact form {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+  margin-top: 1rem;
+  padding: 10px 15px;
+}
+
+.contact form button {
+  width: 25%;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  color: #ffffff;
+  background: #00045f;
+}
+
+@media (max-width: 1024px) {
+  .contact form button {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .section {
+    flex-direction: column;
+  }
+  .contact .section .contact__information {
+    width: 100%;
+  }
+  .contact form {
+    width: 100%;
+    margin: 1rem;
+  }
+  .contact form button {
+    width: 25%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact form {
+    width: 100%;
+    margin: 1rem;
+  }
+  .contact form button {
+    width: 40%;
+  }
+}
