@@ -28,8 +28,10 @@ $text-tertiary-color: #ffffff;
     }
     li:not(:first-child) .list {
       display: flex;
+      flex-wrap: wrap;
     }
     .list {
+      max-width: 120px;
       li {
         cursor: pointer;
         &:not(:last-child) {

@@ -10,6 +10,7 @@ import GithubIcon from '../../assets/icons/github.png';
 import WhatsappIcon from '../../assets/icons/whatsapp.png';
 import PhoneIcon from '../../assets/icons/phone.png';
 import YoutubeIcon from '../../assets/icons/youtube.png';
+import LinkedinIcon from '../../assets/icons/linkedin.png';
 
 // IMAGES
 import Logo from '../../assets/img/logo.png';
@@ -43,11 +44,12 @@ class Footer extends Component {
                         </li>
                         <li>
                             <h6>SOCIAL MEDIA</h6>
-                            <ul className="list">
+                            <ul className="list box__sm">
                                 <li><a href="https://www.facebook.com/profile.php?id=100007872019224"><img src={FacebookIcon} alt="facebook-icon" /></a></li>
                                 <li><a href="https://www.instagram.com/khoirulanam.69/"><img src={InstagramIcon} alt="instagram-icon" /></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCHlojfHlpMcqzC0bDUGUZ3Q"><img src={YoutubeIcon} alt="instagram-icon" /></a></li>
                                 <li><a href="https://github.com/khoirulanam69"><img src={GithubIcon} alt="github-icon" /></a></li>
+                                <li><a href="https://www.linkedin.com/in/muhammad-khoirul-anam-655728252/"><img src={LinkedinIcon} alt="linkedin-icon" /></a></li>
                             </ul>
                         </li>
                         <li>

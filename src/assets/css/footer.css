@@ -27,6 +27,11 @@
 
 .footer__foo .footer__section li:not(:first-child) .list {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__foo .footer__section .list {
+  max-width: 120px;
 }
 
 .footer__foo .footer__section .list li {

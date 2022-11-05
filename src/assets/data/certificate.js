@@ -8,7 +8,6 @@ const Certificate = [
         IlliyinBack
     ],
     [
-        Illiyin,
         DasarFrontEndWeb,
         IlliyinBack
     ]
