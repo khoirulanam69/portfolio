@@ -43,6 +43,10 @@
   box-shadow: 0 0 8px rgba(16, 16, 16, 0.3);
 }
 
+.navbar__brand {
+  display: flex;
+}
+
 @media (max-width: 425px) {
   .navbar {
     height: 50px;

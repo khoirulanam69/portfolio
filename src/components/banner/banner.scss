@@ -1,0 +1,118 @@
+// background color
+$bg-color: #ffffff;
+
+// color
+$primary-color: #f0a410;
+$secondary-color: #00045f;
+
+// text color
+$text-primary-color: #222222;
+$text-secondary-color: #a2a2a2;
+$text-tertiary-color: #ffffff;
+
+// image decoration
+$img-decoration1: "../../assets/img/decorations/Vector1.svg";
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 5rem !important;
+  .section {
+    width: 55%;
+    h3 {
+      color: $text-primary-color;
+    }
+    h1 {
+      color: $primary-color;
+    }
+    p {
+      color: $text-secondary-color;
+      margin-top: 1rem;
+    }
+    .button {
+      ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 8rem;
+        margin-top: 2rem;
+        li {
+          &:last-child a {
+            color: $text-secondary-color;
+          }
+          &:first-child a {
+            margin-right: 2rem;
+            padding: 1rem 3rem;
+            border-radius: 8px;
+            color: $text-tertiary-color;
+            background: $secondary-color;
+          }
+          a:not(:last-child) {
+            margin-right: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  .image {
+    width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+  .decoration {
+    width: 100%;
+    height: 100%;
+    background: url($img-decoration1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -50%;
+    bottom: -20%;
+    z-index: -1;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .jumbotron {
+    margin: 1rem 5%;
+  }
+}
+
+@media (max-width: 900px) {
+  .jumbotron {
+    margin: 0 !important;
+    margin-top: 5rem !important;
+    flex-direction: column-reverse;
+    .section {
+      width: 80%;
+      margin-top: 3rem;
+    }
+    .image {
+      width: 50%;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+    .decoration {
+      height: 50%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .jumbotron {
+    .section {
+      h1 {
+        text-shadow: 0 0 4px rgba($color: $bg-color, $alpha: 0.7);
+      }
+    }
+    .image {
+      width: 70%;
+    }
+  }
+}

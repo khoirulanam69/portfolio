@@ -14,7 +14,7 @@ const dataSkills = {
         },
         {
             "name": "REACT JS",
-            "value": 85,
+            "value": 80,
         },
         {
             "name": "BOOTSTRAP",
@@ -33,8 +33,12 @@ const dataSkills = {
             "value": 70,
         },
         {
-            "name": "MYSQL",
+            "name": "Flutter",
             "value": 80,
+        },
+        {
+            "name": "MYSQL",
+            "value": 90,
         },
     ]
 }

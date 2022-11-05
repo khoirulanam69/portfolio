@@ -1,0 +1,66 @@
+// color
+$tertiary-color: #101010;
+
+.certificates__wrapper {
+  position: absolute;
+  right: 0;
+  width: 49%;
+  height: 100%;
+  .box__certificate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    width: 230px;
+    height: 230px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba($color: $tertiary-color, $alpha: 0.3);
+    h5 {
+      text-align: center;
+    }
+  }
+  .website {
+    top: 5rem;
+    left: 3rem;
+  }
+  .android {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box__certificate {
+    padding: 1.5rem !important;
+  }
+  .website {
+    left: 0 !important;
+  }
+  .android {
+    right: 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .certificates__wrapper {
+    width: 100%;
+    margin-top: 3rem;
+    position: unset;
+    .certificates {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .box__certificate {
+      position: unset;
+      margin: 1rem;
+    }
+    .website {
+      transform: unset;
+    }
+  }
+}
