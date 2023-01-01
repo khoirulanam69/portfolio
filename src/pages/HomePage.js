@@ -1,5 +1,5 @@
 // library
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
 // COMPONETS
@@ -12,17 +12,18 @@ import Skills from '../components/skill/Skills';
 import Contact from '../components/contact/Contact';
 import HireMe from '../components/hireme/HireMe';
 
-const TITLE = 'Khoirul Anam | Home Page';
+const TITLE = 'Home Page | Khoirul Anam';
 
+function DocumentTitle() {
+    useEffect(() => {
+        document.title = 'Portfolio | Khoirul Anam';
+    }, []);
+}
 class HomePage extends Component {
-    componentDidMount() {
-        <Helmet>
-            <title>{TITLE}</title>
-        </Helmet>
-    }
     render() {
         return (
             <div className="App" id="app">
+                <DocumentTitle></DocumentTitle>
                 <Navbar />
                 <Banner />
                 <div className="divider" />
