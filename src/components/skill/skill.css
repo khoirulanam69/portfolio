@@ -1,37 +1,21 @@
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
 }
-
 .container .skills {
   width: 45%;
 }
-
 .container .skills .title p {
   margin: 1rem 0 2rem 0;
 }
-
 .container .skills .skill__information {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 1rem;
 }
-
 .container .skills .skill__bar {
   position: relative;
   width: 100%;
@@ -39,17 +23,32 @@
   margin-top: 0.5rem;
   background: #a2a2a2;
 }
-
-.container .skills .skill__bar::before {
+.container .skills .active::before {
   content: "";
   position: absolute;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
   width: calc(var(--width, 0) * 1%);
   height: 6px;
   background: #f0a410;
+  -webkit-animation: skillbar 1.5s ease-out;
+          animation: skillbar 1.5s ease-out;
 }
-
+@-webkit-keyframes skillbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(var(--width, 0) * 1%);
+  }
+}
+@keyframes skillbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(var(--width, 0) * 1%);
+  }
+}
 .container .decoration {
   width: 100%;
   height: 100%;
@@ -66,7 +65,6 @@
   top: -70% !important;
   right: -70% !important;
 }
-
 .container .decoration1 {
   width: 100%;
   height: 100%;
@@ -84,15 +82,11 @@
   bottom: -110%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .container .skills {
     width: 100%;
   }
-}
-/*# sourceMappingURL=skill.css.map */
+}/*# sourceMappingURL=skill.css.map */

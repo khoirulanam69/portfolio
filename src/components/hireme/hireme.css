@@ -1,0 +1,61 @@
+h2 {
+  text-align: center;
+}
+
+.hire__contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+.hire__contain .box__hire {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3em;
+}
+.hire__contain .box__hire .icon__hire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  background: #a2a2a2;
+}
+.hire__contain .box__hire .icon__hire .icon {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+@media (min-width: 1600px) {
+  .icon__hire {
+    width: 12em !important;
+    height: 12em !important;
+  }
+  .icon__hire .icon {
+    font-size: 5em !important;
+  }
+}
+@media (max-width: 768px) {
+  .icon__hire {
+    width: 5em !important;
+    height: 5em !important;
+  }
+  .icon__hire .icon {
+    font-size: 2em !important;
+  }
+}
+@media (max-width: 425px) {
+  .hire__contain {
+    grid-template-columns: 1fr;
+  }
+  .hire__contain .icon__hire {
+    width: 6em !important;
+    height: 6em !important;
+  }
+  .hire__contain .icon__hire .icon {
+    font-size: 2.5em !important;
+  }
+}/*# sourceMappingURL=hireme.css.map */

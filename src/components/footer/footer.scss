@@ -12,9 +12,11 @@ $text-tertiary-color: #ffffff;
   margin: 0 10%;
   padding: 2rem 0;
   border-top: 2px solid $text-secondary-color;
+
   .footer__brand img {
     width: 90%;
   }
+
   .footer__section {
     display: flex;
     align-items: center;
@@ -23,27 +25,34 @@ $text-tertiary-color: #ffffff;
     align-items: flex-start !important;
     width: 60%;
     margin: 1rem;
+
     h6 {
       margin-bottom: 10px;
     }
+
     li:not(:first-child) .list {
       display: flex;
       flex-wrap: wrap;
     }
+
     .list {
       max-width: 120px;
+
       li {
         cursor: pointer;
+
         &:not(:last-child) {
           margin-right: 1rem;
         }
       }
+
       img {
         width: 1.5em;
       }
     }
   }
 }
+
 .footer__footer {
   display: flex;
   align-items: center;
@@ -51,6 +60,7 @@ $text-tertiary-color: #ffffff;
   height: 4rem;
   color: $text-tertiary-color;
   background: $tertiary-color;
+
   p {
     margin-left: 5px;
   }
@@ -59,6 +69,7 @@ $text-tertiary-color: #ffffff;
 @media (max-width: 768px) {
   .footer__foo {
     flex-direction: column;
+
     .footer__section {
       margin-top: 2rem;
       width: 100%;

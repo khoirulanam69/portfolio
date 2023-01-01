@@ -1,7 +1,7 @@
 // library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
-import { Component } from "react";
+import { Component, Fragment } from "react";
 
 // icon
 import FacebookIcon from '../../assets/icons/facebook.png';
@@ -63,8 +63,7 @@ class Footer extends Component {
                 </div>
                 <div className="footer__footer">
                     <FontAwesomeIcon icon={faCopyright} className="icon" />
-                    <p>2020 Khoirul Anam</p>
-                    <p>2022-2025 M Khoirul Anam | All right reserved</p>
+                    <p>2022-2025 Khoirul Anam | All right reserved</p>
                 </div>
             </div>
         )

@@ -1,92 +1,62 @@
-.certificates {
+.certificates__wrapper {
   position: absolute;
   right: 0;
   width: 49%;
   height: 100%;
-  margin: 1rem;
 }
-
-.certificates .box__certificate {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.certificates__wrapper .box__certificate {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
   cursor: pointer;
   width: 230px;
   height: 230px;
   padding: 1rem;
   border-radius: 8px;
-  -webkit-box-shadow: 0 0 8px rgba(16, 16, 16, 0.3);
-          box-shadow: 0 0 8px rgba(16, 16, 16, 0.3);
+  box-shadow: 0 0 8px rgba(16, 16, 16, 0.3);
 }
-
-.certificates .box__certificate h5 {
+.certificates__wrapper .box__certificate h5 {
   text-align: center;
 }
-
-.certificates .website {
+.certificates__wrapper .website {
+  top: 5rem;
   left: 3rem;
-  top: 3rem;
 }
-
-.certificates .android {
+.certificates__wrapper .android {
   right: 0;
-  bottom: 3rem;
-}
-
-@media (min-width: 1600px) {
-  .certificates .box__certificate {
-    padding: 2rem !important;
-    width: 350px !important;
-    height: 350px !important;
-  }
+  bottom: 0;
 }
 
 @media (max-width: 1024px) {
-  .certificates .box__certificate {
+  .box__certificate {
     padding: 1.5rem !important;
   }
-  .certificates .website {
+  .website {
     left: 0 !important;
   }
-  .certificates .android {
+  .android {
     right: 0 !important;
   }
 }
-
-@media (max-width: 768px) {
-  .certificates {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+@media (max-width: 900px) {
+  .certificates__wrapper {
     width: 100%;
     margin-top: 3rem;
     position: unset;
   }
-  .certificates .box__certificate {
+  .certificates__wrapper .certificates {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .certificates__wrapper .box__certificate {
     position: unset;
     margin: 1rem;
   }
-  .certificates .website {
-    -webkit-transform: unset;
-            transform: unset;
+  .certificates__wrapper .website {
+    transform: unset;
   }
-}
-/*# sourceMappingURL=certificate.css.map */
+}/*# sourceMappingURL=certificate.css.map */

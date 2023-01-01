@@ -1,36 +1,19 @@
 .contact {
   position: relative;
 }
-
 .contact .section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .contact .section .box__information {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 2rem;
 }
-
 .contact .section .box__information .icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -38,29 +21,20 @@
   color: #ffffff !important;
   background: #a2a2a2;
 }
-
 .contact .section .box__information .address__information {
   width: 80%;
 }
-
 .contact form {
   width: 49%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .contact form input,
 .contact form textarea,
 .contact form button {
   margin-top: 1rem;
   padding: 10px 15px;
 }
-
 .contact form button {
   width: 25%;
   border: none;
@@ -75,13 +49,9 @@
     width: 40%;
   }
 }
-
 @media (max-width: 768px) {
   .contact .section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact .section .contact__information {
     width: 100%;
@@ -94,7 +64,6 @@
     width: 25%;
   }
 }
-
 @media (max-width: 425px) {
   .contact form {
     width: 100%;
@@ -103,5 +72,4 @@
   .contact form button {
     width: 40%;
   }
-}
-/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=contact.css.map */
