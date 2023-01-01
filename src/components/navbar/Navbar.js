@@ -1,6 +1,6 @@
 // library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faSlidersH, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPhone, faSlidersH, faTasks } from '@fortawesome/free-solid-svg-icons';
 import { Component } from "react";
 
 // IMAGES
@@ -24,7 +24,10 @@ window.addEventListener('scroll', function () {
         const skill = document.querySelector('#skills');
         const contact = document.querySelector('.contact');
 
-        if (window.scrollY > project.offsetTop - 300 && window.scrollY < skill.offsetTop - 300) {
+        if (window.scrollY < project.offsetTop - 300) {
+            if (document.querySelector('.navbar .active')) document.querySelector('.navbar .active').classList.remove('active');
+            document.querySelector('.home__menu').classList.add('active');
+        } else if (window.scrollY > project.offsetTop - 300 && window.scrollY < skill.offsetTop - 300) {
             if (document.querySelector('.navbar .active')) document.querySelector('.navbar .active').classList.remove('active');
             document.querySelector('.project__menu').classList.add('active');
         } else if (window.scrollY > skill.offsetTop - 300 && window.scrollY < contact.offsetTop - 300) {
@@ -49,13 +52,14 @@ class Navbar extends Component {
     }
     render() {
         return (
-            <nav className="navbar">
+            <nav className="navbar" id="navbar">
                 <div className="navbar__brand">
                     <img src={Logo} alt="Logo" onClick={() => this.smoothScroll("app")} />
                 </div>
                 <div className="navbar__nav">
                     <div className="btn-menu" />
                     <ul>
+                        <li className="home__menu" onClick={() => { this.smoothScroll("navbar") }}><FontAwesomeIcon icon={faHome} className="icon" /> <span>Home</span></li>
                         <li className="project__menu" onClick={() => { this.smoothScroll("projects") }}><FontAwesomeIcon icon={faTasks} className="icon" /> <span>Projects</span></li>
                         <li className="skill__menu" onClick={() => this.smoothScroll("skills")}><FontAwesomeIcon icon={faSlidersH} className="icon" /><span>Skills</span></li>
                         <li className="contact__menu" onClick={() => this.smoothScroll("contact")}><FontAwesomeIcon icon={faPhone} className="icon" /><span>Contact</span></li>

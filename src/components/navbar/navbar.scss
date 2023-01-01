@@ -83,7 +83,7 @@ $text-secondary-color: #a2a2a2;
       background: $bg-color;
       box-sizing: border-box;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       box-shadow: 0 -2px 8px rgba($color: $tertiary-color, $alpha: 0.1);
 
       li {

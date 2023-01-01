@@ -64,7 +64,7 @@
     background: #ffffff;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     box-shadow: 0 -2px 8px rgba(16, 16, 16, 0.1);
   }
   .navbar ul li {
