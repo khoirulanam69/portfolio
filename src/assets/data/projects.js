@@ -4,6 +4,8 @@ import Trainingsystem from '../img/projects/training.png';
 import Portfolio from '../img/projects/portfolio.png';
 import Earsip from '../img/projects/Earsip.png';
 import Muse from '../img/projects/muse.png';
+import QodirKunci from '../img/projects/qodirkunci.png';
+import Epasien from '../img/projects/epasien.png';
 
 // android
 import Anime from '../img/projects/anime.png';
@@ -20,6 +22,26 @@ const dataProjects = {
             "code": "https://github.com/khoirulanam69/anime-app/archive/refs/heads/master.zip",
             "created": 2022,
             "type": "android"
+        },
+        {
+            "name": "E-Pasien",
+            "company": "RSU Pindad",
+            "image": Epasien,
+            "description": "E-Pasien is an aplication use to patient registration to RSU Pindad. Released",
+            "website": "http://myrsupindadturen.simkeskhanza.com/epasien/",
+            "code": "https://github.com/khoirulanam69/epasien/archive/refs/heads/master.zip",
+            "created": 2022,
+            "type": "website"
+        },
+        {
+            "name": "Portfolio Website",
+            "company": "Qodir Kunci",
+            "image": QodirKunci,
+            "description": "Portfolio website use to promotion Qodir Kunci bussiness. Released",
+            "website": "https://qodirkuncikepanjen.com/",
+            "code": "https://github.com/khoirulanam69/portfolio-website-qodir/archive/refs/heads/master.zip",
+            "created": 2022,
+            "type": "website"
         },
         {
             "name": "Portfolio",
