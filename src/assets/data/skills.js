@@ -2,7 +2,7 @@ const dataSkills = {
     "skills": [
         {
             "name": "HTML",
-            "value": 95,
+            "value": 90,
         },
         {
             "name": "CSS",
@@ -10,35 +10,31 @@ const dataSkills = {
         },
         {
             "name": "JAVASCRIPT",
-            "value": 85,
+            "value": 80,
         },
         {
             "name": "REACT JS",
-            "value": 80,
-        },
-        {
-            "name": "BOOTSTRAP",
-            "value": 90,
-        },
-        {
-            "name": "PHP",
-            "value": 85,
-        },
-        {
-            "name": "LARAVEL",
-            "value": 85,
-        },
-        {
-            "name": "CI",
             "value": 70,
         },
         {
-            "name": "Flutter",
+            "name": "BOOTSTRAP",
+            "value": 85,
+        },
+        {
+            "name": "PHP",
             "value": 80,
         },
         {
+            "name": "LARAVEL",
+            "value": 80,
+        },
+        {
+            "name": "Flutter",
+            "value": 70,
+        },
+        {
             "name": "MYSQL",
-            "value": 90,
+            "value": 85,
         },
     ]
 }

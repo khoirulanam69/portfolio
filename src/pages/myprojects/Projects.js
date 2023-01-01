@@ -14,7 +14,7 @@ import './projects.scss';
 
 const Projects = () => {
     const [openAllProjects, setOpenAllProjects] = useState(false)
-    const [objectPerLoad, setObjectPerLoad] = useState(4);
+    const [objectPerLoad, setObjectPerLoad] = useState(3);
     const [projectType, setProjectType] = useState();
 
     const CheckTypeProject = () => {
