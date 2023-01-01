@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container .skills {
+  width: 45%;
+}
+
+.container .skills .title p {
+  margin: 1rem 0 2rem 0;
+}
+
+.container .skills .skill__information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.container .skills .skill__bar {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.5rem;
+  background: #a2a2a2;
+}
+
+.container .skills .active::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-2px);
+  width: calc(var(--width, 0) * 1%);
+  height: 6px;
+  background: #f0a410;
+  animation: skillbar 1.5s ease-out;
+}
+
+@keyframes skillbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(var(--width, 0) * 1%);
+  }
+}
+
+.container .decoration {
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/img/decorations/Vector1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  top: auto;
+  opacity: 0.3;
+  top: -70% !important;
+  right: -70% !important;
+}
+
+.container .decoration1 {
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/img/decorations/Vector.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  top: auto;
+  opacity: 0.3;
+  left: -40%;
+  bottom: -110%;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .skills {
+    width: 100%;
+  }
+}

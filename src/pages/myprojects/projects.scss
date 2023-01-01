@@ -1,0 +1,119 @@
+// color
+$primary-color: #f0a410;
+$secondary-color: #00045f;
+$tertiary-color: #101010;
+
+// text color
+$text-tertiary-color: #ffffff;
+
+.projects {
+  .title {
+    width: 40%;
+    padding-left: 10%;
+    p {
+      margin: 1rem 0 2rem 0;
+    }
+    ul {
+      display: flex;
+      li {
+        position: relative;
+        cursor: pointer;
+        padding: 0 10px;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      .active::before {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 3px solid $primary-color;
+      }
+    }
+  }
+  .box__container {
+    width: 90%;
+    margin: 1rem auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    .project {
+      position: relative;
+      cursor: pointer;
+      .project__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 5%;
+        color: $text-tertiary-color;
+      }
+      &:hover .hover {
+        display: block;
+      }
+      .hover {
+        content: "";
+        width: 100%;
+        height: 98.5%;
+        position: absolute;
+        background: rgba($color: $tertiary-color, $alpha: 0.7);
+        display: none;
+        p:last-child {
+          margin-top: 1rem;
+        }
+        .project__link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 0 1rem;
+          position: absolute;
+          bottom: 1rem;
+          a {
+            color: $text-tertiary-color;
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .btn__view {
+    cursor: pointer;
+    text-align: center;
+    color: $secondary-color;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects .title {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .title {
+    width: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+  // PROJECTS
+  .projects {
+    .title {
+      width: 100%;
+    }
+    .box__container {
+      .project__title {
+        p:last-child {
+          max-height: 5rem;
+          overflow: scroll;
+        }
+      }
+    }
+  }
+}
