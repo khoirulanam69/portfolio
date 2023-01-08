@@ -1,7 +1,7 @@
 // library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
-import { Component, Fragment } from "react";
+import { Component } from "react";
 
 // icon
 import FacebookIcon from '../../assets/icons/facebook.png';

@@ -1,6 +1,5 @@
 // library
 import React, { Component, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 
 // COMPONETS
 import Navbar from '../components/navbar/Navbar';
@@ -11,8 +10,6 @@ import Banner from '../components/banner/Banner';
 import Skills from '../components/skill/Skills';
 import Contact from '../components/contact/Contact';
 import HireMe from '../components/hireme/HireMe';
-
-const TITLE = 'Home Page | Khoirul Anam';
 
 function DocumentTitle() {
     useEffect(() => {
