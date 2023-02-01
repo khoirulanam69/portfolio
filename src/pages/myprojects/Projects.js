@@ -1,7 +1,7 @@
 // library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // pages
 import WebProjects from './part-projects/WebProjects';
@@ -10,28 +10,43 @@ import AllProjects from './part-projects/AllProject';
 
 // style
 import './projects.scss';
+import axios from "axios";
 
 
 const Projects = () => {
     const [openAllProjects, setOpenAllProjects] = useState(false)
-    const [objectPerLoad, setObjectPerLoad] = useState(3);
     const [projectType, setProjectType] = useState();
+    const [projects, setProjects] = useState([]);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://portfoliobackend.epizy.com/api/projects').then(response => response.data.projects.data);
+            setProjects(response);
+            console.log(response);
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     const CheckTypeProject = () => {
+        const projectAndroid = projects.filter(project => project.type === 'android')
+        const projectWebsite = projects.filter(project => project.type === 'website')
         if (projectType === "website") {
-            return <WebProjects objectPerLoad={objectPerLoad} />
+            return <WebProjects projectList={projectWebsite} />
         } else if (projectType === "android") {
-            return <AndroidProjects objectPerLoad={objectPerLoad} />
+            return <AndroidProjects projectList={projectAndroid} />
         }
-        return <AllProjects objectPerLoad={objectPerLoad} />
+        return <AllProjects projectList={projects} />
     }
 
     const loadMore = (e) => {
         if (e.target.innerText === "View More ") {
-            setObjectPerLoad(100);
             setOpenAllProjects(true);
         } else {
-            setObjectPerLoad(4);
             setOpenAllProjects(false);
         }
     }

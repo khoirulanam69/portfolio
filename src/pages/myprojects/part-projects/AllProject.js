@@ -2,18 +2,16 @@ import { faDownload, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 
-// data
-import DataProjects from '../../../assets/data/projects';
-
 class AllProjects extends Component {
     constructor(props) {
         super(props);
-        this.state = { objectPerLoad: this.props.objectPerLoad }
+        this.state = { projectAll: this.props.projectList }
     }
 
     render() {
+        console.log(this.state.projectAll);
         return (
-            DataProjects.projects.slice(0, this.state.objectPerLoad).map((element, idx) => {
+            this.state.projectAll.map((element, idx) => {
                 return (
                     <li key={idx} className="project">
                         <div className="project__title">
@@ -27,11 +25,11 @@ class AllProjects extends Component {
                                 <p>{element.description}</p>
                             </div>
                             <div className="project__link">
-                                <a href={element.website} target="_blank" rel="noreferrer">Live Preview <FontAwesomeIcon icon={faEye} /></a>
-                                <a href={element.code}>Download <FontAwesomeIcon icon={faDownload} /></a>
+                                <a href={element.link} target="_blank" rel="noreferrer">Live Preview <FontAwesomeIcon icon={faEye} /></a>
+                                <a href={element.github}>Download <FontAwesomeIcon icon={faDownload} /></a>
                             </div>
                         </div>
-                        <img src={element.image} alt={element.name} />
+                        <img src={element.imageUrl} alt={element.image} />
                     </li>
                 )
             })

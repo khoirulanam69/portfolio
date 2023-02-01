@@ -2,21 +2,15 @@ import { faDownload, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Component } from "react";
 
-// data
-import DataProjects from '../../../assets/data/projects';
-
 class AndroidProjects extends Component {
     constructor(props) {
         super(props);
-        this.state = { objectPerLoad: this.props.objectPerLoad }
+        this.state = { projectAndroid: this.props.projectList }
     }
 
     render() {
         return (
-            DataProjects.projects.filter((element) => { return element.type === "android" }).slice(this.state.index, this.state.objectPerLoad).map((element, idx) => {
-                if (element.type !== "android") {
-                    return false;
-                }
+            this.state.projectAndroid.map((element, idx) => {
                 return (
                     <li key={idx} className="project">
                         <div className="project__title">
@@ -30,11 +24,11 @@ class AndroidProjects extends Component {
                                 <p>{element.description}</p>
                             </div>
                             <div className="project__link">
-                                <a href={element.website} target="_blank" rel="noreferrer">Live Preview <FontAwesomeIcon icon={faEye} /></a>
-                                <a href={element.code}>Download <FontAwesomeIcon icon={faDownload} /></a>
+                                <a href={element.link} target="_blank" rel="noreferrer">Live Preview <FontAwesomeIcon icon={faEye} /></a>
+                                <a href={element.github}>Download <FontAwesomeIcon icon={faDownload} /></a>
                             </div>
                         </div>
-                        <img src={element.image} alt={element.name} />
+                        <img src={element.imageUrl} alt={element.image} />
                     </li>
                 )
             })
