@@ -59,10 +59,10 @@ class Navbar extends Component {
                 <div className="navbar__nav">
                     <div className="btn-menu" />
                     <ul>
-                        <li className="home__menu" onClick={() => { this.smoothScroll("navbar") }}><FontAwesomeIcon icon={faHome} className="icon" /> <span>Home</span></li>
-                        <li className="project__menu" onClick={() => { this.smoothScroll("projects") }}><FontAwesomeIcon icon={faTasks} className="icon" /> <span>Projects</span></li>
-                        <li className="skill__menu" onClick={() => this.smoothScroll("skills")}><FontAwesomeIcon icon={faSlidersH} className="icon" /><span>Skills</span></li>
-                        <li className="contact__menu" onClick={() => this.smoothScroll("contact")}><FontAwesomeIcon icon={faPhone} className="icon" /><span>Contact</span></li>
+                        <li className="home__menu" onClick={() => { this.smoothScroll("navbar") }}><FontAwesomeIcon icon={faHome} className="icon" /> <p>Home</p></li>
+                        <li className="project__menu" onClick={() => { this.smoothScroll("projects") }}><FontAwesomeIcon icon={faTasks} className="icon" /> <p>Projects</p></li>
+                        <li className="skill__menu" onClick={() => this.smoothScroll("skills")}><FontAwesomeIcon icon={faSlidersH} className="icon" /><p>Skills</p></li>
+                        <li className="contact__menu" onClick={() => this.smoothScroll("contact")}><FontAwesomeIcon icon={faPhone} className="icon" /><p>Contact</p></li>
                     </ul>
                 </div>
             </nav >

@@ -1,6 +1,4 @@
 // library
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
 
 // pages
@@ -14,15 +12,13 @@ import axios from "axios";
 
 
 const Projects = () => {
-    const [openAllProjects, setOpenAllProjects] = useState(false)
     const [projectType, setProjectType] = useState();
     const [projects, setProjects] = useState([]);
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://portfoliobackend.epizy.com/api/projects').then(response => response.data.projects.data);
+            const response = await axios.get('https://portfolio-back-end.000webhostapp.com/api/projects').then(res => res.data.projects.data);
             setProjects(response);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }
@@ -41,14 +37,6 @@ const Projects = () => {
             return <AndroidProjects projectList={projectAndroid} />
         }
         return <AllProjects projectList={projects} />
-    }
-
-    const loadMore = (e) => {
-        if (e.target.innerText === "View More ") {
-            setOpenAllProjects(true);
-        } else {
-            setOpenAllProjects(false);
-        }
     }
 
     const setTypeProject = (e) => {
@@ -81,17 +69,7 @@ const Projects = () => {
             <ul className="box__container">
                 <CheckTypeProject />
             </ul>
-            {openAllProjects ?
-                <div className="btn__view" onClick={loadMore}>
-                    <span>View Less </span>
-                    <FontAwesomeIcon icon={faChevronUp} />
-                </div> :
-                <div className="btn__view" onClick={loadMore}>
-                    <span>View More </span>
-                    <FontAwesomeIcon icon={faChevronDown} />
-                </div>}
         </div>
-
     )
 }
 export default Projects;

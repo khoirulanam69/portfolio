@@ -74,8 +74,8 @@ ul {
     font-size: 0.9em;
   }
   p,
-span,
-.icon {
+  span,
+  .icon {
     font-size: 0.9em;
   }
 }
@@ -87,8 +87,8 @@ span,
     font-size: 0.8em;
   }
   p,
-span,
-.icon {
+  span,
+  .icon {
     font-size: 0.8em;
   }
 }/*# sourceMappingURL=App.css.map */

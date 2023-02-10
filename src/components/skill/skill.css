@@ -30,16 +30,7 @@
   width: calc(var(--width, 0) * 1%);
   height: 6px;
   background: #f0a410;
-  -webkit-animation: skillbar 1.5s ease-out;
-          animation: skillbar 1.5s ease-out;
-}
-@-webkit-keyframes skillbar {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: calc(var(--width, 0) * 1%);
-  }
+  animation: skillbar 1.5s ease-out;
 }
 @keyframes skillbar {
   0% {

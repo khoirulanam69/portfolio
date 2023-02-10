@@ -9,7 +9,6 @@ class AllProjects extends Component {
     }
 
     render() {
-        console.log(this.state.projectAll);
         return (
             this.state.projectAll.map((element, idx) => {
                 return (
