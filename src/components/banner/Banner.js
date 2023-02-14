@@ -16,7 +16,7 @@ class Banner extends Component {
                 <div className="section">
                     <h3>Hi, I am Khoirul Anam</h3>
                     <h1>A Web Developer</h1>
-                    <p>II'm from Indonesia, I had graduated from State University of Malang on August 2021 and the major is Informatics Enginering. I had an internship at Illiyin Studio as fullstack developer for 3 months. I had worked approximately 1 years as freelance developer. I ever worked at RSU Pindad as IT Staff in 2021 until 2022.</p>
+                    <p>I had graduated from State University of Malang on August 2021 and the major is Informatics Enginering. I had an internship at Illiyin Studio as fullstack developer for 3 months. I had worked approximately 1 years as freelance developer. I ever worked at RSU Pindad as IT Staff in 2021 until 2022.</p>
                     <div className="button">
                         <ul>
                             <li><a href="mailto:khoirulanam.um@gmail.com">Let's Talk</a></li>
